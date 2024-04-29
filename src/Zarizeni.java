@@ -2,8 +2,13 @@ public abstract class Zarizeni {
     private boolean pujceno;
     private int udrzba;
     public void rezervace() {
-        pujceno = true;
-        udrzba++;
+        if (pujceno == false) {
+            pujceno = true;
+            udrzba++;
+        }
+        else {
+            System.out.println("Zařízení už je vypůjčeno jiným, počkejte si na svou řadu");
+        }
     }
     public void vraceni() {
         pujceno = false;

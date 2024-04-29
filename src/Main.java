@@ -11,14 +11,14 @@ public class Main {
         String vstup= "";
 
         while(!vstup.equals("0")) {
-            System.out.println("1: Pujcit\n2: Vratit\n3: údržba");
+            System.out.println("1: Pujcit\n2: Vratit\n3: údržba\n4: vypis");
             System.out.println("Pro ukonceni programu stisknete: 0.");
             vstup = sc.nextLine();
 
             switch(vstup) {
                 case "1":
                     String vyber="";
-                    System.out.println("Jake zarizení si chcete půjčit");
+                    System.out.println("Jake zarizení si chcete půjčit?");
                     while(!vyber.equals("0")) {
                         System.out.println("1: Bezeci Pas\n2: Bench\n3: Rotopad\n4: činka");
                         System.out.println("Pro Vrácení zpátky: 0.");
@@ -45,7 +45,7 @@ public class Main {
                     break;
                 case "2":
                     String vyber2="";
-                    System.out.println("Jake zarizení budete vracet");
+                    System.out.println("Jake zarizení budete vracet?");
                     while(!vyber2.equals("0")) {
                         System.out.println("1: Bezeci Pas\n2: Bench\n3: Rotopad\n4: činka");
                         System.out.println("Pro Vrácení zpátky: 0.");
@@ -72,7 +72,7 @@ public class Main {
                     break;
                 case "3":
                     String vyber3="";
-                    System.out.println("Jake zarizení si chcete půjčit");
+                    System.out.println("Na jakém zařízení chcete provést údržbu?");
                     while(!vyber3.equals("0")) {
                         System.out.println("1: Bezeci Pas\n2: Bench\n3: Rotopad\n4: činka");
                         System.out.println("Pro Vrácení zpátky: 0.");
@@ -97,6 +97,34 @@ public class Main {
                         }
                     }
                     break;
+                case "4":
+                    String vyber4="";
+                    System.out.println("O jakém uařízení chcete vypsat info?");
+                    while(!vyber4.equals("0")) {
+                        System.out.println("1: Bezeci Pas\n2: Bench\n3: Rotopad\n4: činka");
+                        System.out.println("Pro Vrácení zpátky: 0.");
+                        vyber4 = sc.nextLine();
+
+                        switch (vyber4) {
+                            case "1":
+                                run.vypisInfo();
+                                break;
+                            case "2":
+                                bench.vypisInfo();
+                                break;
+                            case "3":
+                                rotopad.vypisInfo();
+                                break;
+                            case "4":
+                                dumbell.vypisInfo();
+                                break;
+                            case "0":
+                                System.out.println("Program vás vrací zpět");
+                                break;
+                        }
+                    }
+                    break;
+
                 case "0":
                     System.out.println("Program se ukončuje");
                     break;
