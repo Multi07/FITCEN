@@ -17,7 +17,13 @@ public abstract class Zarizeni {
         System.out.println("Pujceno: "+ pujceno+" poslední udrzba pred "+udrzba+" použitími");
     }
     public void udrzba() {
-        udrzba = 0;
+        if (pujceno == false) {
+            udrzba = 0;
+        }
+        else {
+            System.out.println("Zařízení je používáno, opakujte akci až bude zařízení volné, děkujeme.");
+        }
+
     }
 
     public Zarizeni(boolean pujceno, int udrzba) {
